@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+	<div class="container">
+		<script style="display: block; white-space: pre;">
+
+			//------------------Задача 1------------------------------//
+			function multiple(a, b) {
+				return a * b;
+			}
+
+			console.log('два на два :', multiple(2, 2));
+
+			//----------------------------Задача 2----------------------------//
+			function buildDate(day, month, year) {
+				return `${day}/${month}/${year}`;
+			}
+
+			console.log('Записанная дата:', buildDate(12, 12, 2000));
+
+			//------------------------Задача 3------------------------------//
+			function isAdult(age) {
+				return age >= 18;
+			}
+
+			console.log('Ты совершенолетний?:', isAdult(18));
+
+			//------------------Задача 4-----------------------------//
+			function getMonthByNumber(monthNumber) {
+				const INITIAL_AMOUNT = monthNumber;
+				switch (INITIAL_AMOUNT) {
+					case 1: return 'Январь';
+					case 2: return 'Февраль';
+					case 3: return 'Март';
+					case 4: return 'Апрель';
+					case 5: return 'Май';
+					case 6: return 'Июнь';
+					case 7: return 'Июль';
+					case 8: return 'Август';
+					case 9: return 'Сентябрь';
+					case 10: return 'Октябрь';
+					case 11: return 'Ноябрь';
+					case 12: return 'Декабрь';
+					default: return `${INITIAL_AMOUNT} месяца не существует`;
+				}
+			}
+
+			console.log('Пятый месяц:', getMonthByNumber(5));
+
+			//---------------------Задача 5------------------------------//
+			function convertRub(valueRub, currency) {
+				const RATES = currency;
+				switch (RATES) {
+					case 'USD': return valueRub * 0.010;
+					case 'EUR': return valueRub * 0.0092;
+					case 'KZT': return valueRub * 4.57;
+					case 'AED': return valueRub * 0.037;
+					default: null;
+				}
+			}
+
+			console.log('150 рублей в доллорах:', convertRub(150, 'USD'));
+
+		</script>
+	</div>
+</body>
+
+</html>
