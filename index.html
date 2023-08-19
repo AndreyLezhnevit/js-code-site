@@ -10,30 +10,33 @@
 
 <body>
 	<div class="container">
-		<script style="display: block; white-space: pre;">
+		<script style="display: block; white-space: pre;" contenteditable="">
 
-			//------------------Задача 1------------есть ответы в инструментах разработчика-----------//
+			console.log('__________CHECKPONT 1_____________');
+			console.log('------------Задача 1-------------');
+			console.log('два на два :', multiple(2, 2));
+
 			function multiple(a, b) {
 				return a * b;
 			}
 
-			console.log('два на два :', multiple(2, 2));
+			console.log('------------Задача 2-------------');
+			console.log('Записанная дата:', buildDate(12, 12, 2000));
 
-			//----------------------------Задача 2----------------------------//
 			function buildDate(day, month, year) {
 				return `${day}/${month}/${year}`;
 			}
 
-			console.log('Записанная дата:', buildDate(12, 12, 2000));
+			console.log('------------Задача 3-------------');
+			console.log('Ты совершенолетний?:', isAdult(18));
 
-			//------------------------Задача 3------------------------------//
 			function isAdult(age) {
 				return age >= 18;
 			}
 
-			console.log('Ты совершенолетний?:', isAdult(18));
+			console.log('------------Задача 4-------------');
+			console.log('Пятый месяц:', getMonthByNumber(5));
 
-			//------------------Задача 4-----------------------------//
 			function getMonthByNumber(monthNumber) {
 				const INITIAL_AMOUNT = monthNumber;
 				switch (INITIAL_AMOUNT) {
@@ -53,9 +56,9 @@
 				}
 			}
 
-			console.log('Пятый месяц:', getMonthByNumber(5));
+			console.log('------------Задача 5-------------');
+			console.log('150 рублей в доллорах:', convertRub(150, 'USD'));
 
-			//---------------------Задача 5------------------------------//
 			function convertRub(valueRub, currency) {
 				const RATES = currency;
 				switch (RATES) {
@@ -67,8 +70,86 @@
 				}
 			}
 
-			console.log('150 рублей в доллорах:', convertRub(150, 'USD'));
+			console.log('__________CHECKPONT 2_____________');
+			console.log('------------Задача 1-------------');
+			printNumbers();
 
+			function printNumbers() {
+				for (let index = -10; index <= 10; index++) {
+					console.log(index);
+				}
+			}
+
+			console.log('------------Задача 2-------------');
+			printNumbersByRange(-1, 1);
+
+			function printNumbersByRange(start, end) {
+				for (let index = start; index <= end; index++) {
+					console.log(index);
+				}
+			}
+
+			console.log('------------Задача 3-------------');
+			calculateNumbersSum([0, 1, 2, 4, 8]);
+
+			function calculateNumbersSum(numbers) {
+				let sum = 0;
+				for (let i = 0; i < numbers.length; i++) {
+					sum += numbers[i];
+				}
+
+				return console.log(`Сумма этого массива [${numbers}] = ${sum}`);
+			}
+
+			console.log('------------Задача 4-------------');
+			includes([5, 0, 3], 4);
+
+			function includes(numbers, number) {
+				for (let index = 0; index < numbers.length; index++) {
+					if (numbers[index] === number) {
+						return console.log(true);
+					}
+				}
+				return console.log(false);
+			}
+
+			console.log('------------Задача 5-------------');
+			console.log(createPerson('Андрей', 'Сарон', 21));
+
+			function createPerson(name, surname, age) {
+				return PERSON = {
+					name: name,
+					surname: surname,
+					age: age,
+				}
+			}
+
+			console.log('------------Задача 6-------------');
+
+			const PEOPLE = [
+				createPerson('Рокускэ', 'Коэнджи', 20),
+				createPerson('Киётака', 'Аянокоджи', 23),
+				createPerson('Какэру', 'Рюэн', 22),
+				createPerson('Кохэй', 'Кацураги', 21),
+			];
+
+			console.log('Список людей', PEOPLE)
+
+			findOldest(PEOPLE);
+
+
+			function findOldest(people) {
+				let maxAge = people[0].age;
+				let oldestPerson = people[0].name
+
+				for (let index = 0; index < people.length; index++) {
+					if (people[index].age > maxAge) {
+						maxAge = people[index].age;
+						oldestPerson = people[index].name
+					}
+				}
+				return console.log('Найти имя самого старшего:', oldestPerson)
+			}
 		</script>
 	</div>
 </body>
