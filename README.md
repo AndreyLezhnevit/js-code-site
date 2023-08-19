@@ -1,2 +1,2 @@
-# js-code-site
-Ссылка на сайт: https://andreylezhnevit.github.io/js-code-site/
+# js-task-site
+Ссылка на сайт: https://andreylezhnevit.github.io/js-task-site/
